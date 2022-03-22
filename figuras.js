@@ -1,17 +1,20 @@
 //*Cuadrado
 console.group("Cuadrado"); //!Agrupar mensajes en la consola
-// const ladoCuadrado = 5; //Variable que no se le cambiara el valor, equivale al largo del lado del cuadrado
-// console.log("Los lados del cuadrado miden: " + ladoCuadrado + "cm");
-
 function perimetroCuadrado(lado){ //Las funciones nos permiten recibir parametros
     return lado * 4;
 }
-// const perimetroCuadrado = ladoCuadrado * 4;
-// console.log("El Perimetro del Cuadrado es: " + perimetroCuadrado + "cm");
 
 function areaCuadrado(lado){
     return lado * lado;
 }
+// const ladoCuadrado = 5; //Variable que no se le cambiara el valor, equivale al largo del lado del cuadrado
+// console.log("Los lados del cuadrado miden: " + ladoCuadrado + "cm");
+
+
+// const perimetroCuadrado = ladoCuadrado * 4;
+// console.log("El Perimetro del Cuadrado es: " + perimetroCuadrado + "cm");
+
+
 // const areaCuadrado = ladoCuadrado * ladoCuadrado;
 // console.log("El Area del Cuadrado es: " + areaCuadrado + "cm^2");
 
@@ -19,6 +22,13 @@ console.groupEnd(); //!Fin de agrupacion en consola
 
 //*Triangulo
 console.group("Triangulo"); //!Agrupar mensajes en la consola
+function perimetroTriangulo(lado1, lado2, base){
+    return parseInt(lado1 + lado2 + base);
+}
+
+function areaTriangulo(base, altura){
+    return (base * altura) / 2;
+}
 // const ladoTriangulo1 = 6; //Variable que no se le cambiara el valor, equivale al largo del lado del triangulo
 // const ladoTriangulo2 = 6;
 // const baseTriangulo = 4;
@@ -35,9 +45,6 @@ console.group("Triangulo"); //!Agrupar mensajes en la consola
 //     "cm"
 // );
 
-function perimetroTriangulo(lado1, lado2, base){
-    return lado1 + lado2 + base + "cm";
-}
 
 // const alturaTriangulo = 5.5;
 // console.log("Algura del Triangulo: " + alturaTriangulo + "cm");
@@ -45,9 +52,6 @@ function perimetroTriangulo(lado1, lado2, base){
 // const perimetroTriangulo = ladoTriangulo1 + ladoTriangulo2 + baseTriangulo;
 // console.log("Perimetro del Triangulo: " + perimetroTriangulo + "cm");
 
-function areaTriangulo(base, altura){
-    return (base * altura) / 2;
-}
 
 // const areaTriangulo = (baseTriangulo * alturaTriangulo) / 2;
 // console.log("Area de Triangulo: " + areaTriangulo + "cm")
@@ -74,6 +78,8 @@ function circunferenciaCirculo(radio){
 function areaCirculo(radio){
     return (radio * radio) * PI;
 }
+
+
 // //?Radio
 // const radioCirculo = 4;
 // console.log("Radio del Circulo: " + radioCirculo + "cm");
@@ -92,4 +98,52 @@ function areaCirculo(radio){
 // console.log("Area del Circulo: " + areaCirculo + "cm");
 
 console.groupEnd();
+
+//!Interaccion con el HTML
+//?Cuadrado
+function calcularPerimetroCuadrado(){
+    const input = document.getElementById("InputCuadrado"); //Se obtiene el valor que el usuario ingreso en el input
+    const value = input.value;
+
+    const perimetro = perimetroCuadrado(value);
+    alert(perimetro);
+
+}
+
+function calcularAreaCuadrado(){
+    const input = document.getElementById("InputCuadrado");
+    const value = input.value;
+
+    const area = areaCuadrado(value);
+    alert(area);
+
+}
+
+//?Triangulo
+// function calcularAreaTriangulo(){
+//     const input1 =  document.getElementById("InputTrianguloLado1");
+//     const lado1 =  input1.value;
+//     const input2 =  document.getElementById("InputTrianguloLado2");
+//     const lado2 =  input2.value;
+//     const input3 =  document.getElementById("InputTrianguloBase");
+//     const base =  input3.value;
+//     const perimetro = 
+//     alert(typeof(perimetro);
+
+    
+
+// }
+
+
+function calcularAreaTriangulo(){
+    const inputBase = document.getElementById("InputTrianguloBase");
+    const valueB = inputBase.value;
+    const inputAltura = document.getElementById("InputTriagnuloAltura");
+    const valueA = inputAltura.value;
+
+    const area = areaTriangulo(valueB, valueA);
+    alert(area);
+
+}
+
 
