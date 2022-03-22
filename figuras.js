@@ -31,6 +31,25 @@ function areaTriangulo(base, altura){
     var resultado = (base * altura) / 2
     return resultado;
 }
+
+function alturaTriangulo(lado1, lado2, lado3){
+    if(lado1 != lado2){
+        console.error("No es un Triangulo Isoceles")
+    } else{
+        var resultado = (lado1 * lado1) - ((lado3 * lado3)/4);
+        var altura = Math.sqrt(resultado);
+        return altura;
+    }
+}
+
+function areaTriangulo2(lado1, lado2, lado3){
+    const altura =  alturaTriangulo(lado1, lado2, lado3);
+    var resultado = (lado3 * altura) / 2;
+    return resultado;
+}
+
+    
+
 // const ladoTriangulo1 = 6; //Variable que no se le cambiara el valor, equivale al largo del lado del triangulo
 // const ladoTriangulo2 = 6;
 // const baseTriangulo = 4;
@@ -147,6 +166,23 @@ function calcularAreaTriangulo(){
     alert(area);
 }
 
+function calcularAreaTriangulo2(){
+    const input1 = document.getElementById("InputLado1");
+    const value1 = input1.value;
+
+    const input2 = document.getElementById("InputLado2");
+    const value2 = input2.value;
+
+    const input3 = document.getElementById("InputLado3");
+    const value3= input3.value;
+
+    const altura = areaTriangulo2(value1, value2, value3);
+    alert(altura);
+}
+
+//?Circulo
+
+//!Diametro Circulo
 function calcularDiametroCirculo(){
     const radio = document.getElementById("InputRadio");
     const value = radio.value;
@@ -155,6 +191,7 @@ function calcularDiametroCirculo(){
     alert(diametro);
 }
 
+//!Circunferencia Circulo
 function calcularCircunferenciaCirculo(){
     const radio = document.getElementById("InputRadio");
     const value = radio.value;
@@ -163,6 +200,7 @@ function calcularCircunferenciaCirculo(){
     alert(circunferencia);
 }
 
+//!Area Circulo
 function calcularAreaCirculo(){
     const radio = document.getElementById("InputRadio");
     const value = radio.value;
