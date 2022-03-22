@@ -26,16 +26,32 @@
         <form>
             <label for="InputTrianguloLado1">Lado 1:</label>
             <input type="number" id="InputTrianguloLado1">
+
             <label for="InputTrianguloLado2">Lado 2:</label>
-            <input type="number" id="InputTrianguloLado1">
+            <input type="number" id="InputTrianguloLado2">
+
             <label for="InputTrianguloBase">Base del Triangulo:</label>
             <input type="number" id="InputTrianguloBase">
-            <label for="InputTrianguloAltura">Base del Triangulo:</label>
+
+            <label for="InputTrianguloAltura">Altura del Triangulo:</label>
             <input type="number" id="InputTrianguloAltura">
+
             <button type="button" onclick="calcularPerimetroTriangulo()">Calcular Perimetro</button>
             <button type="button" onclick="calcularAreaTriangulo()">Calcular Area</button>
 
         </form>
+    </section>
+
+    <section class="Circulo">
+        <h2>Calcula el Area y Perimetro de un Circulo</h2>
+        <form>
+            <label for="InputRadio">Radio: </label>
+            <input type="number" id="InputRadio">
+            <button type="button" onclick="calcularDiametroCirculo()">Calcular Diametro</button>
+            <button type="button" onclick="calcularCircunferenciaCirculo()">Calcular Circuferencia</button>
+            <button type="button" onclick="calcularAreaCirculo()">Calcular Area</button>
+        </form>
+
     </section>
     <script src="./figuras.js"></script>
   </body>
