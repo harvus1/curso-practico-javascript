@@ -23,7 +23,8 @@ console.groupEnd(); //!Fin de agrupacion en consola
 //*Triangulo
 console.group("Triangulo"); //!Agrupar mensajes en la consola
 function perimetroTriangulo(lado1, lado2, base){
-    return parseInt(lado1 + lado2 + base);
+    const resultado = parseInt(lado1) + parseInt(lado2) + parseInt(base);
+    console.log(resultado);
 }
 
 function areaTriangulo(base, altura){
@@ -120,30 +121,21 @@ function calcularAreaCuadrado(){
 }
 
 //?Triangulo
-// function calcularAreaTriangulo(){
-//     const input1 =  document.getElementById("InputTrianguloLado1");
-//     const lado1 =  input1.value;
-//     const input2 =  document.getElementById("InputTrianguloLado2");
-//     const lado2 =  input2.value;
-//     const input3 =  document.getElementById("InputTrianguloBase");
-//     const base =  input3.value;
-//     const perimetro = 
-//     alert(typeof(perimetro);
+function calcularPerimetroTriangulo(){
+    const lado1 = document.getElementById("InputTrianguloLado1");
+    const value1 = lado1.value;
 
-    
+    const lado2 = document.getElementById("InputTrianguloLado2");
+    const value2 = lado2.value;
 
-// }
+    const base = document.getElementById("InputTrianguloBase");
+    const value3 = base.value;
 
+    const altura = document.getElementById("InputTrianguloAltura");
+    const value4 = altura.value;
 
-function calcularAreaTriangulo(){
-    const inputBase = document.getElementById("InputTrianguloBase");
-    const valueB = inputBase.value;
-    const inputAltura = document.getElementById("InputTriagnuloAltura");
-    const valueA = inputAltura.value;
-
-    const area = areaTriangulo(valueB, valueA);
-    alert(area);
-
+    const perimetro = perimetroTriangulo(value1, value2, value3);
+    alert(perimetro);
 }
 
 
