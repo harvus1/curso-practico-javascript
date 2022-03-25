@@ -29,25 +29,21 @@ function onClickButtonPriceDiscount() {
 
   let descuento;
 
-  switch(couponValue){
-      case cupones[0]:
+  switch (couponValue) {
+    case cupones[0]:
       descuento = 10;
       break;
-      case cupones[1]:
+    case cupones[1]:
       descuento = 20;
       break;
-      case cupones[2]:
+    case cupones[2]:
       descuento = 50;
       break;
-      default:
-          alert("NO EXISTEN TAL CUPON!");
+    default:
+      alert("NO EXISTEN TAL CUPON!");
   }
 
-
-  const precioConDescuento = calcularprecioConDescuento(
-    priceValue,
-    descuento
-  );
+  const precioConDescuento = calcularprecioConDescuento(priceValue, descuento);
 
   const resultP = document.getElementById("ResultPrice");
   resultP.innerText = "El Precio con Descuento es: $" + precioConDescuento;

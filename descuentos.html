@@ -4,22 +4,35 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
     <title>Porcentajes y Descuentos</title>
     <style>
-        section input{
-            display: flex;
-            margin: 10px;
-        }
+      :root {
+          font: Ubuntu;
+      }
+      section input {
+        display: flex;
+        margin: 10px;
+        border-radius: 6px;
+      }
 
-        section label {
-            font-weight: bold;
-        }
+      section label {
+        font-weight: bold;
+      }
 
-        section button{
-            margin: 10px;
-        }
+      section button {
+        margin: 10px;
+        background-color: black;
+        color: white;
+        padding: 10px;
+        border-radius: 5%;
+      }
     </style>
-   
   </head>
   <body>
     <header>
@@ -37,7 +50,7 @@
         <input type="number" id="InputDiscount" />
 
         <label for="InputCoupon">Ingrese Cupon:</label>
-        <input type="text" id="InputCoupon">
+        <input type="text" id="InputCoupon" />
 
         <button type="button" onclick="onClickButtonPriceDiscount()">
           Calcular Precio
