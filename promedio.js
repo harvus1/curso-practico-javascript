@@ -1,18 +1,32 @@
+// const lista1 = [100, 200, 500, 600];
 
-function calcularPromedio(lista) {
-//   let sumaLista = 0;
+// let sumaLista1 = 0;
 
-//   for (let i = 0; i < lista.length; i++) {
-//     sumaLista = sumaLista + lista[i];
-//   }
+// for(let i = 0; i < lista1.length; i++){
+//     sumaLista1 = sumaLista1 + lista1[i];
 
-const sumaLista = lista.reduce(           //!Recibe una funcion y esto nos permite ir sumando cada uno de nuestros elementos que se vayan agregando
-    function(valorAcumulado  = 0, nuevoElemento){
-        return valorAcumulado + nuevoElemento;
+// }
 
+// const promedioLista1 = sumaLista1 / lista1.length;
+
+// function calcularPromedioLista(lista){
+//     let sumaLista = 0;
+//     for(let i = 0; i < lista.length; i++){
+//         sumaLista = sumaLista + lista[i];
+//     }
+
+//     const promedioLista = sumaLista / lista.length;
+//     return promedioLista;
+
+// }
+
+function calcularPromedioLista(lista) {
+  const sumaLista = lista.reduce(//!Recibe como argumento una lista y va a ir sumando con cada elemento de la lista
+    function (valorAcumulado = 0, nuevoValor) {
+      return valorAcumulado + nuevoValor;
     }
-);   
+  );
 
-  const promedioLista = sumaLista / lista.length;
+  const promedioLista = sumaLista / lista.lenght;
   return promedioLista;
 }
